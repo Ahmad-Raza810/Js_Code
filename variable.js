@@ -7,7 +7,7 @@ myfunc=function(){
 var myVar=10
 let mylet=10 
 const myConst=10
-console.log(myVar,mylet,myConst,vari)
+console.table([myVar,mylet,myConst,vari])
 }
 console.log(vari)
 myfunc()
