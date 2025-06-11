@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+</head>
+<body style="background-color: grey;">
+    <form  id="bmiVal" align="center">
+        Enter Hight(m):<input type="text" id="height">
+        <br><br>
+        Enter Wieght(Kg):<input type="text" id="weight">
+        <br><br>
+        <input type="submit"  value="Calculate" id="submit">
+    </form>
+    <br><br><br>
+
+    <div id="result" align="center"></div>
+
+    <div id="info" align="center">
+        
+           <h3>📊 BMI Categories (for adults):</h3>
+           <br>
+            <h4>BMI Value	Category</h4>
+             
+            Less than 18.5 ------->	Underweight <br>
+            18.5 – 24.9	----------> Normal weight  <br>
+            25 – 29.9	----------> Overweight <br>
+            30 or more	----------> Obese <br>
+        </h3>
+    </div>
+
+</body>
+<script>
+    let form=document.querySelector('form')
+    form.addEventListener('submit',(event) => {
+    event.preventDefault()
+    let height=parseFloat(form.querySelector('#height').value)
+    let wieght=parseFloat(form.querySelector('#weight').value)
+    document.querySelector('#result').innerHTML=wieght/height
+       
+})
+    
+
+
+</script>
+</html>

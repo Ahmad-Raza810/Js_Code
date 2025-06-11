@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+ 
+  <body></body>
+
+  <script>
+    // const mydiv = document.createElement("div");
+    // mydiv.setAttribute("class", "div1");
+    // mydiv.id = Math.floor(Math.random() * 10 + 1);
+    // mydiv.style.border="2px solid black"
+    // mydiv.style.backgroundColor='violet'
+    // mydiv.style.color="blue "
+    // console.log(mydiv);
+   
+    //document.body.appendChild(mydiv)
+
+    let createDivs=function (bgColor,message) {
+        let div=document.createElement('div')
+        div.setAttribute('class','group-1')
+        div.id=Math.floor(Math.random()*10+1) 
+        div.style.height="50px"
+        div.style.width="50px"
+        div.style.border="2px solid black"
+        div.style.margin="15px"
+        div.style.padding="10px"
+        div.innerText=message   
+        div.style.backgroundColor=bgColor 
+        document.body.appendChild(div)
+    }
+    let colors=['violet','grey','blue','purple','green']
+    let messages=['first div','second div','third div','fourth div','fifth div']
+    
+    for (let index = 0; index <colors.length; index++) {
+        
+        createDivs(colors[index],`My ${messages[index]}`)
+    }
+/*     createDivs('violet','My first div..')
+    createDivs('blue','My second div..')
+    createDivs('violet','My first div..')
+    createDivs('blue','My second div..')
+    createDivs('violet','My first div..')
+    createDivs('blue','My second div..') */
+  </script>
+</html>

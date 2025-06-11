@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: grey;">
+    
+    <div class="guesses" id="d1">
+        <h1>Guess The Number</h1>
+        <form  id="guess">
+            Enter The Number:<input type="text" id="guessField">
+            <br><br>
+            <input type="submit" id="submit">
+        </form>
+    </div>
+
+    <div class="result" id="d2">
+     <p id="message"></p>
+    </div>
+</body>
+ <script>
+
+    //genrating random number bw  1 and 100
+    const randomNum=parseInt(Math.random()*100+1)
+    console.log(randomNum)
+
+    //selecting important fields 
+    const guessField=document.getElementById('guessField')
+    const submit=document.getElementById('submit')
+    const p=document.getElementById('message')
+
+    const guess=parseInt(guessField.value)
+    console.log(guess);
+    validateGuess(guess)
+    
+       function validateGuess(guess){
+
+       if(isNaN(guess)){
+        alert("enter a valid number..")
+       }
+       else if(guess<1)
+       {
+         alert("number should be greater than one.")
+       }
+       else if(guess>100)
+       {
+          alert("number should be smaller than hundred.")
+       }
+       else {
+
+       }
+
+    }
+
+ </script>
+</html>

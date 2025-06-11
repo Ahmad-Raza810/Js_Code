@@ -5,15 +5,17 @@
  */
 
 let number = 49.99;
-console.log(`These all are numeric values: ${number}, ${NaN}, ${Infinity}, ${-Infinity}`);
+//console.log(`These all are numeric values: ${number}, ${NaN}, ${Infinity}, ${-Infinity}`);
 
 let id=Symbol("Abc")
 let id2=Symbol("Abc")
 
 if (id2!==id) {
-    console.log("A unique memory spaces allocated..........");
+    //console.log("A unique memory spaces allocated..........");
     
 }
 
+"use strict"
 
-
+console.log(h);
+h="hello"

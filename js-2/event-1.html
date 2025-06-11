@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn" onclick="alert('hello')">Click me for alert</button>
+
+    <h1 id="heading">this is heading</h1>
+    <p class="p1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, repellat!
+    </p>
+
+    <button class="btn" id="btn2">
+     Testing
+    </button>
+</body>
+<script>
+    let head=document.getElementById('heading')
+    head.onclick=myfunc
+
+    function myfunc()
+     {
+      alert("heading clicked...")  
+    }
+
+      
+
+    let p=document.querySelector('p')
+    p.addEventListener('click',function () {
+        let loginId=Math.floor(Math.random()*10+1)
+        alert(`your login id is ${loginId}`)
+        
+    })
+
+    document.getElementById('btn2').addEventListener('click', function(event) {
+  console.log(event); // Event object
+  console.log(event.type); // click
+  console.log(event.target); // the button element
+});
+
+    
+</script>
+</html>

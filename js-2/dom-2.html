@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">monday</div>
+        <!-- #this is commment  -->
+      <div class="child">tuesday</div>
+      <div class="child">wednesday</div>
+      <div class="child">thrusday</div>
+    </div>
+  </body>
+
+  <script>
+    let parent = document.querySelector(".parent");
+    console.log(parent);
+    const childs=parent.children;
+    //console.log(child);
+
+    for (let i = 0; i < childs.length; i++) {
+        childs[i].style.backgroundColor='green'
+        console.log(childs[i].innerHTML);
+       
+    }
+
+    let firstelement=parent.firstElementChild
+    let sib=firstelement.nextElementSibling.innerHTML
+    console.log(sib);
+    
+
+    console.log(parent.childNodes);
+    
+    
+    
+  </script>
+</html>

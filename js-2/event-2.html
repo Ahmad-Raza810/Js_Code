@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="items">
+        <li id="i1">
+            <h1>First item</h1>
+        </li>
+        <li id="i2"><h2>Second item</h2></li>
+        <li id="i3"> <h3>third item</h3> </li>
+        <li id="i4"> <h4>fourth item</h4></li>
+        <li id="i5"><h5>fifth item</h5></li>
+    </ul>
+
+</body>
+<script>
+    let items=document.querySelector('#items')
+    
+    items.addEventListener('click',(e)=>{
+        console.log(e.target);
+        
+        e.target.parentNode.remove()
+    })
+</script>
+</html>
