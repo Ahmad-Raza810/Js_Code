@@ -6,6 +6,7 @@ let   test2;
 const test3="val";
 console.log(test,test2,test3)
 
+x=10
 
 var stop=5
 
@@ -18,8 +19,10 @@ function greet() {
     return
     greet()   
 }
+console.log(test,x)
 
-console.log(typeof greet());
+
+//console.log(typeof greet());
 
 
 
